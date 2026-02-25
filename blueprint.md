@@ -1,33 +1,33 @@
-
 # Lotto Number Generator
 
 ## Overview
 
-This project is a simple web application that generates lottery numbers.
+This project is a simple web application that generates lottery numbers with a modern UI and theme support.
 
 ## Features
 
-*   Generate 6 unique random numbers between 1 and 45.
-*   Display the generated numbers to the user.
-*   A button to trigger the number generation.
-*   Modern and clean user interface.
+*   **Lotto Number Generator**: Generates 6 unique random numbers between 1 and 45.
+*   **Theme Support**: Integrated Dark and Light mode toggle.
+*   **Persistence**: Theme preference is saved in `localStorage`.
+*   **Web Components**: Reusable `<lotto-generator>` custom element for encapsulated logic and styles.
+*   **Modern UI**: Responsive design with smooth transitions and subtle shadows.
 
-## Current Plan
+## Design
+
+*   **Colors**: Dynamic color palette controlled via CSS variables (`--bg-color`, `--text-color`, etc.).
+*   **Transitions**: Smooth transitions for background and color changes.
+*   **Iconography/UI**: Clear toggle button and stylized number containers.
+
+## Implementation Details
 
 1.  **`index.html`**:
-    *   Change the title to "Lotto Number Generator".
-    *   Add a heading.
-    *   Use a custom element `<lotto-generator>` to encapsulate the application.
+    *   Entry point with a theme toggle button and the `<lotto-generator>` custom element.
 
-2.  **`main.js`**:
-    *   Create a `<lotto-generator>` web component.
-    *   The component will contain a button and a display area for the numbers.
-    *   Clicking the button will trigger the `generateNumbers` function.
-    *   The `generateNumbers` function will:
-        *   Create a set to store unique numbers.
-        *   Generate random numbers between 1 and 45 until the set contains 6 numbers.
-        *   Display the numbers in the display area.
+2.  **`style.css`**:
+    *   Defines CSS variables for `:root` (light) and `[data-theme="dark"]`.
+    *   Global styles for body, headings, and the theme toggle button.
 
-3.  **`style.css`**:
-    *   Add styles for the overall layout, button, and number display.
-    *   Use a modern and visually appealing design.
+3.  **`main.js`**:
+    *   Defines the `LottoGenerator` class.
+    *   Handles the theme switching logic and state persistence.
+    *   Uses Shadow DOM for component encapsulation while referencing global CSS variables.
