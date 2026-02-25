@@ -7,6 +7,7 @@ This project is a simple web application that generates lottery numbers with a m
 ## Features
 
 *   **Lotto Number Generator**: Generates 6 unique random numbers between 1 and 45.
+*   **Partnership Inquiry Form**: A contact form integrated with Formspree for handling inquiries.
 *   **Theme Support**: Integrated Dark and Light mode toggle.
 *   **Persistence**: Theme preference is saved in `localStorage`.
 *   **Web Components**: Reusable `<lotto-generator>` custom element for encapsulated logic and styles.
